@@ -1,0 +1,14 @@
+<h1> ANSWER </h1>
+
+<%if @answer.include?('?') %>
+    <h3><%=@answer%></h3>
+    <p>"Silly question, get dressed and go to work!"</p>
+<%elsif @answer == "I am going to work right now!"%>
+    <h3><%=@answer%></h3>
+    <p>Great!</p>
+<%else%>
+    <h3><%=@answer%></h3>
+    <p>"I don't care, get dressed and go to work!"</p>
+<%end%>
+
+<%= link_to "Ask again", ask_path %>
